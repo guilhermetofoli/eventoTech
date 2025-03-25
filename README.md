@@ -14,8 +14,10 @@ Projeto - Evento Tech | Planejamento e Prototipagem
 
 
 # Estruturas do Site (mapa do site) #
-- Homepage;
+- Início;
 - Sobre;
+- Eventos;
+- Conecte-se
 
 # Wireframe ou protótipo #
 - Figma ou Canva;
