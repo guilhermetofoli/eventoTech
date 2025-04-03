@@ -38,8 +38,14 @@ body, html {
 
 /* Tamanho da imagem da navbar */
 .navbar img {
-    height: 40px; /* Definindo altura fixada para a imagem */
-    width: auto;
+    height: 25vw;
+    width: 25vw;
+}
+
+.gdg {
+        margin-left: 5%;
+        height: 10vw;
+        width: 10vw;
 }
 
 /* Estilo da lista de itens de navegação */
