@@ -83,6 +83,7 @@ body, html {
     text-decoration: underline;
 }
 
+
 /* Garantir que o conteúdo abaixo da barra não fique escondido */
 .conteudo {
     padding-top: 80px; /* Espaço para não ficar coberto pela barra */
@@ -138,8 +139,6 @@ body, html {
     outline: none; /* Remove o contorno padrão ao clicar no botão */
     box-shadow: 0 0 5px rgba(0, 119, 255, 0.7); /* Adiciona sombra azul ao focar */
 }
-
-
 /* Estilo do footer */
 .footer {
     display: flex; /* Usando flexbox para as colunas */
@@ -198,3 +197,6 @@ body, html {
 .footer-column a:hover {
     color: #1286F3; /* Cor azul ao passar o mouse */
 }
+
+
+/* Estilo Eventos */
