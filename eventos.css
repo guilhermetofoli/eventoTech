@@ -38,15 +38,18 @@ body, html {
 
 /* Tamanho da imagem da navbar */
 .navbar img {
-    height: 25vw;
-    width: 25vw;
+    height: 1.2rem;
+    width: 25rem;
 }
 
 .gdg {
-        margin-left: 5%;
-        height: 10vw;
-        width: 10vw;
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-left: 1rem;
 }
+
 
 /* Estilo da lista de itens de navegação */
 .navbar ul {
@@ -141,7 +144,7 @@ body, html {
 
 /* Estilizando cards */
 
-.event-list {
+.evento-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -149,7 +152,7 @@ body, html {
     margin: 30px auto;
 }
 
-.event-card {
+.evento-card {
     background-color: #f5f5f5;
     padding: 20px;
     border-left: 6px solid #1286F3;
@@ -157,7 +160,7 @@ body, html {
     border-radius: 8px;
 }
 
-.event-card h2 {
+.evento-card h2 {
     font-size: 1.5rem;
     color: #002244;
     margin-bottom: 10px;
@@ -223,4 +226,78 @@ body, html {
 }
 
 
-/* Estilo Eventos */
+/* Responsividade */
+
+/* Estilo do botão hamburguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: rgb(2, 36, 61);
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+/* Mobile: até 768px */
+@media screen and (max-width: 768px) {
+    /* Mostra o botão de menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconde o menu por padrão no mobile */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* abaixo da navbar */
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Centralizar svg do GDG */
+    .gdg {
+        margin-left: -15px;
+        margin-top: 9px;
+
+    }
+
+    /* Mostra o menu quando tiver classe .active (ao clicar) */
+    .navbar ul.active {
+        display: flex;
+    }
+
+    /* Espaçamento dos itens em coluna */
+    .navbar li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    footer {
+        box-sizing: border-box;
+    }
+
+    footer .footer-column h3{
+        font-size: 15px;
+    }
+
+    .rede-social {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        font-size: 25px;
+    }
+
+    footer .footer-column ul,
+    footer .footer-column li,
+    footer .footer-column p,
+    footer .footer-column a{
+        font-size: 12px;
+    }
+
+   
+}
