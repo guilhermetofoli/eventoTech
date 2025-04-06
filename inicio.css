@@ -38,8 +38,8 @@ body, html {
 
 /* Tamanho da imagem da navbar */
 .navbar img {
-    height: 25vw;
-    width: 25vw;
+    height: 1.2rem;
+    width: 25rem;
 }
 
 .gdg {
@@ -116,24 +116,30 @@ body, html {
 
 /* Estilo dos botões */
 .button {
-    background-color: white; /* Fundo branco */
-    color: rgb(0, 89, 255); /* Cor do texto azul */
-    border: 2px solid rgb(0, 89, 255); /* Borda azul */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 1rem; /* Tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
-    transition: all 0.3s ease; /* Transição suave */
-    box-shadow: 0 4px 6px rgba(0, 89, 255, 0.562); /* Sombras sutis para dar profundidade */
+    display: inline-block; /* Importante para o transform funcionar corretamente */
+    background: linear-gradient(135deg, #0b65c2, #1286F3);
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(18, 134, 243, 0.4);
+    width: 250px;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
+
+
 
 /* Efeito de hover nos botões */
 .button:hover {
-    background-color: rgb(0, 119, 255); /* Fundo azul */
-    color: white; /* Cor do texto branca */
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(18, 134, 243, 0.6);
+    background: linear-gradient(135deg, #0a59a9, #1286F3);
 }
-
 /* Efeito de foco (quando o botão é selecionado) */
 .button:focus {
     outline: none; /* Remove o contorno padrão ao clicar no botão */
@@ -198,5 +204,15 @@ body, html {
     color: #1286F3; /* Cor azul ao passar o mouse */
 }
 
+/* RESPONSIVIDADE */
 
-/* Estilo Eventos */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%;
+    }
+}
