@@ -277,26 +277,21 @@ body, html {
         text-align: center;
     }
 
-    footer {
-        box-sizing: border-box;
+    .footer {
+        flex-direction: column; /* Coloca as colunas em coluna */
+        align-items: center; /* Centraliza o conteúdo do footer */
+        padding: 10px; /* Reduz o padding do footer */
     }
 
-    footer .footer-column h3{
-        font-size: 15px;
+    .footer-column {
+        flex: 1; /* Colunas ocupam o mesmo espaço */
+        margin: 0 5px; /* Espaçamento entre as colunas */
     }
-
-    .rede-social {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        font-size: 25px;
+    .footer-column h3 {
+        font-size: 1rem; /* Tamanho do título reduzido para mobile */
     }
-
-    footer .footer-column ul,
-    footer .footer-column li,
-    footer .footer-column p,
-    footer .footer-column a{
-        font-size: 12px;
+    .footer-column p {
+        font-size: 0.9rem; /* Tamanho do texto reduzido para mobile */
     }
 
    
