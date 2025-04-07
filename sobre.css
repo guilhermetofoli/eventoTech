@@ -147,9 +147,8 @@ body, html {
     padding: 20px; /* Espaçamento interno */
     font-size: 1rem; /* Tamanho da fonte */
     width: 100%; /* Garante que o footer ocupe toda a largura da tela */
+    height: 100%; /* Garante que o footer ocupe toda a altura da tela */
     box-sizing: border-box; /* Inclui o padding na largura total */
-    position: absolute; /* Garante que o footer fique no final da página */
-    bottom: 0; /* Posiciona o footer no final */
     left: 0; /* Garante que o footer fique alinhado à esquerda */
     align-items: flex-start;
     
