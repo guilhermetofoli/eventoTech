@@ -38,8 +38,8 @@ body, html {
 
 /* Tamanho da imagem da navbar */
 .navbar img {
-    height: 25vw;
-    width: 25vw;
+    height: 1.2rem;
+    width: 25rem;
 }
 
 .gdg {
@@ -84,55 +84,61 @@ body, html {
 }
 
 
-/* Estilizando a seção de conteúdo */
+/* Garantir que o conteúdo abaixo da barra não fique escondido */
 .conteudo {
-    display: flex;
-    flex-direction: column; /* Mantém o título acima */
-    align-items: flex-start; /* Alinha o conteúdo à esquerda */
-    text-align: left;
-    padding: 20px;
+    padding-top: 80px; /* Espaço para não ficar coberto pela barra */
+    margin: 20px 0px 20px 20px; /* Margens para evitar que o conteúdo fique colado nas bordas */
 }
 
-/* O título ocupa toda a largura para ficar no topo */
 .conteudo h1 {
-    width: 100%;
-    text-align: left;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
     font-style: italic;
-    margin-bottom: 20px; /* Reduzi para aproximar do texto */
-    margin-top: 80px; /* Ajustado para subir um pouco */
-    padding: 0px 0px 0px 20px; /*Alinhamento com o parágrafo*/
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-/* Agrupando o parágrafo e a imagem */
-.conteudo-wrapper {
-    display: flex;
-    align-items: flex-start; /* Mantém o texto mais no topo */
-    justify-content: space-between; /* Separa os elementos */
-    width: 100%; /* Ocupa toda a largura */
-    padding: 20px 0px 20px 20px;
-}
-
-
-/* Ajustando o texto */
 .conteudo p {
-    font-size: 1.5rem;
-    width: 640px;
-    text-align: left;
-    margin-top: 50px; /* Garante que o texto fique mais no topo */
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0 auto 30px;
+    width: 50%; /* Limita a largura do texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+    color: #333; /* Cor do texto */
+    text-align: justify; /* Justifica o texto para melhor apresentação */
+    text-justify: inter-word; /* Justifica o texto entre as palavras */
+    text-indent: 2em; /* Indenta o primeiro parágrafo para dar destaque */
+
 }
 
-/* Ajustando a imagem */
-.conteudo img {
-    max-width: 100%;
-    height: 500px;
-    margin-left: auto; /* Empurra a imagem para a direita */
+/* Container para os botões */
+.conteudo-container{
+    display: flex; /* Usando flexbox para alinhar os botões lado a lado */
+    gap: 20px; /* Espaçamento entre os botões */
+    justify-content: center; /* Alinha os botões ao centro */
+    margin-top: 20px; /* Espaço superior para os botões */
+    align-items: center; /* Alinha os itens verticalmente */
+    flex-direction: row; /* Mantém os botões lado a lado */
+}
+
+.imagem-container {
+    margin-bottom: 50px;
+    height: 400px;
+    width: 660px;
+    box-sizing: border-box;
     border-radius: 25px 0px 0px 25px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+    display: flex; /* Usando flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    background-color: #f0f0f0; /* Cor de fundo do container */
+    border: 2px 2px 2px 2px solid #ccc; /* Borda do container */
+    box-shadow: 0 4px 6px rgba(0, 89, 255, 0.562); /* Sombras sutis para dar profundidade */
+
 }
 
-
-
+/* Estilo do footer */
 .footer {
     display: flex; /* Usando flexbox para as colunas */
     justify-content: space-between; /* Espaço igual entre as colunas */
@@ -142,7 +148,7 @@ body, html {
     font-size: 1rem; /* Tamanho da fonte */
     width: 100%; /* Garante que o footer ocupe toda a largura da tela */
     box-sizing: border-box; /* Inclui o padding na largura total */
-    position: relative; /* Garante que o footer fique no final da página */
+    position: absolute; /* Garante que o footer fique no final da página */
     bottom: 0; /* Posiciona o footer no final */
     left: 0; /* Garante que o footer fique alinhado à esquerda */
     align-items: flex-start;
@@ -191,3 +197,11 @@ body, html {
     color: #1286F3; /* Cor azul ao passar o mouse */
 }
 
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    .conteudo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
