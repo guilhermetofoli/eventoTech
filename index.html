@@ -12,11 +12,19 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="https://gdg.community.dev/"><img class="gdg" src="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo_dark_QmPdj9K.svg" class="svg" alt="Google Developer Groups logo"></a>
+
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <a href="https://gdg.community.dev/">
+            <img class="gdg" src="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo_dark_QmPdj9K.svg" alt="Google Developer Groups logo">
+        </a>
+        
         <ul>
-            <li><a class="active" href="/eventoTech/index.html">Início</a></li>
-            <li><a href="/eventoTech/sobre.html">Sobre</a></li>
-            <li><a href="/eventoTech/eventos.html">Eventos</a></li>
+            <li><a class="active" href="/index.html">Início</a></li>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="/eventos.html">Eventos</a></li>
         </ul>
     </nav>
     <div class="conteudo">
@@ -49,5 +57,14 @@
             </ul>
         </div>
     </footer>
+
+     <script>
+        const toggleBtn = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.navbar ul');
+    
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
