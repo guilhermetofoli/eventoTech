@@ -43,10 +43,13 @@ body, html {
 }
 
 .gdg {
-        margin-left: 5%;
-        height: 10vw;
-        width: 10vw;
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-left: 1rem;
 }
+
 
 /* Estilo da lista de itens de navegação */
 .navbar ul {
@@ -83,11 +86,10 @@ body, html {
     text-decoration: underline;
 }
 
-
 /* Garantir que o conteúdo abaixo da barra não fique escondido */
 .conteudo {
     padding-top: 80px; /* Espaço para não ficar coberto pela barra */
-    margin: 20px 0px 20px 20px; /* Margens para evitar que o conteúdo fique colado nas bordas */
+    margin: 0 20px; /* Margens para evitar que o conteúdo fique colado nas bordas */
 }
 
 .conteudo h1 {
@@ -196,11 +198,77 @@ body, html {
     color: #1286F3; /* Cor azul ao passar o mouse */
 }
 
+
+/* Estilo do botão hamburguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: rgb(2, 36, 61);
+    cursor: pointer;
+}
+
 /* RESPONSIVIDADE */
 
-@media (max-width: 600px) {
-    .conteudo-container {
-        flex-direction: column;
-        align-items: center;
+/* Estilos responsivos */
+/* Mobile: até 768px */
+@media screen and (max-width: 768px) {
+    /* Mostra o botão de menu */
+    .menu-toggle {
+        display: block;
     }
+
+    /* Esconde o menu por padrão no mobile */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* abaixo da navbar */
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Centralizar svg do GDG */
+    .gdg {
+        margin-left: -15px;
+        margin-top: 9px;
+
+    }
+
+    /* Mostra o menu quando tiver classe .active (ao clicar) */
+    .navbar ul.active {
+        display: flex;
+        right: 0px; /* Menu utiliza totalmente a largura da página */
+        margin: 10px 0px 0px 0px; /* Ajusta o espaçamento superior e as laterais */
+    }
+
+    /* Espaçamento dos itens em coluna */
+    .navbar li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column; /* Coloca as colunas em coluna */
+        align-items: center; /* Centraliza o conteúdo do footer */
+        padding: 10px; /* Reduz o padding do footer */
+        margin-top: 50px;
+    }
+
+    .footer-column {
+        flex: 1; /* Colunas ocupam o mesmo espaço */
+        margin: 0 5px; /* Espaçamento entre as colunas */
+    }
+    .footer-column h3 {
+        font-size: 1rem; /* Tamanho do título reduzido para mobile */
+    }
+    .footer-column p {
+        font-size: 0.9rem; /* Tamanho do texto reduzido para mobile */
+    }
+
+   
 }
