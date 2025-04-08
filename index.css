@@ -207,28 +207,28 @@ body, html {
     color: #1286F3; /* Cor azul ao passar o mouse */
 }
 
-/* RESPONSIVIDADE */
+/* Responsividade */
 
 /* Estilo do botão hamburguer */
 .menu-toggle {
+    display: none;
     background: none;
     border: none;
     font-size: 2rem;
     color: rgb(2, 36, 61);
     cursor: pointer;
-    display: none; /* Começa oculto para desktop */
 }
 
-    /* Estilos responsivos */
-    /* Mobile: até 768px */
-    @media screen and (max-width: 768px) {
-        /* Mostra o botão de menu */
-        .menu-toggle {
-            display: block;
-        }
-    
-        /* Esconde o menu por padrão no mobile */
-        .navbar ul {
+/* Estilos responsivos */
+/* Mobile: até 768px */
+@media screen and (max-width: 768px) {
+    /* Mostra o botão de menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconde o menu por padrão no mobile */
+    .navbar ul {
         display: none;
         flex-direction: column;
         background-color: white;
@@ -259,69 +259,7 @@ body, html {
         margin: 10px 0;
         text-align: center;
     }
-    
-        footer {
-            box-sizing: border-box;
-        }
-    
-        footer .footer-column h3{
-            font-size: 15px;
-        }
-    
-        .rede-social {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            font-size: 25px;
-        }
-    
-        footer .footer-column ul,
-        footer .footer-column li,
-        footer .footer-column p,
-        footer .footer-column a{
-            font-size: 12px;
-        }
-    
-   
-}
 
-
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Mostra o botão de menu no mobile */
-    }
-
-    .navbar ul {
-        display: none; /* Esconde o menu principal */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-    }
-
-    .navbar ul.active {
-        display: flex;
-    }
-
-    .button-container {
-        flex-direction: column; /* Coloca os botões em coluna */
-        gap: 10px; /* Espaçamento entre os botões */
-    }
-    .button {
-        width: 100%; /* Botões ocupam toda a largura disponível */
-        text-align: center; /* Centraliza o texto dentro do botão */
-    }
-    .conteudo h1 {
-        font-size: 2rem; /* Tamanho da fonte reduzido para mobile */
-    }
-    .conteudo p {
-        font-size: 1rem; /* Tamanho da fonte reduzido para mobile */
-        width: 90%; /* Largura do texto reduzida para mobile */
-    }
     .footer {
         flex-direction: column; /* Coloca as colunas em coluna */
         align-items: center; /* Centraliza o conteúdo do footer */
