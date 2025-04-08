@@ -250,6 +250,8 @@ body, html {
     /* Mostra o menu quando tiver classe .active (ao clicar) */
     .navbar ul.active {
         display: flex;
+        right: 0px; /* Menu utiliza totalmente a largura da página */
+        margin: 10px 0px 0px 0px; /* Ajusta o espaçamento superior e as laterais */
     }
 
     /* Espaçamento dos itens em coluna */
@@ -320,10 +322,11 @@ body, html {
         font-size: 1rem; /* Tamanho da fonte reduzido para mobile */
         width: 90%; /* Largura do texto reduzida para mobile */
     }
-.footer {
+    .footer {
         flex-direction: column; /* Coloca as colunas em coluna */
         align-items: center; /* Centraliza o conteúdo do footer */
         padding: 10px; /* Reduz o padding do footer */
+        margin-top: 50px;
     }
 
     .footer-column {
