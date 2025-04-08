@@ -156,14 +156,11 @@ body, html {
     padding: 20px; /* Espaçamento interno */
     font-size: 1rem; /* Tamanho da fonte */
     width: 100%; /* Garante que o footer ocupe toda a largura da tela */
-    position: absolute;
-    height: auto; /* Garante que o footer ocupe toda a altura da tela */
-    box-sizing: border-box; /* Inclui o padding na largura total */
-    bottom: 0; /* Posiciona o footer no final */
-    left: 0; /* Garante que o footer fique alinhado à esquerda */
+    box-sizing: border-box; /*padding na largura total */
     align-items: flex-start;
-    
+    margin-top: auto; /*Fique na parte inferior */
 }
+
 
 /* Estilo das colunas */
 .footer-column {
